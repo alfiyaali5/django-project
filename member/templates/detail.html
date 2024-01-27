@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+  
+<html>
+   <style>h1{
+    text-align: center; 
+   }</style>
+<head>
+     <link rel="stylesheet" href="{% static 'detail.css' %}">
+</head>
+{% block body %}
+
+<body>
+     <img width="200" height="300"src="{{mymember.image.url}}">
+     <h1>
+      {{mymember.firstname}}-{{mymember.lastname}}<br>
+       {{mymember.rollno}}
+     </h1>
+     <a class='btn btn-warning' href="update/{{mymember.id}}">update</a>
+     <a class='btn btn-warning' href="delete/{{mymember.id}}">delete</a>
+ 
+  </body>
+  {% endblock %}
+</html>
